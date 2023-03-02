@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        if (조건식) {
+            조건식이 true일 때 실행
+        } else {
+            조건식이 false일 때 실행
+        }
+        */
+       /*
+        if (조건식1) {
+            조건식1이 true일 때 실행
+        } else if(조건식2){
+            조건식1이 false일 때 조건식 2가 true일 때 실행
+        } else {
+            조건식1도 false 이고 조건식2도 false일 때 실행
+        }
+        */
+       let time = 2;
+       if(time < 10) {
+        console.log("좋은아침");
+       } else if(time < 20) {
+        console.log("좋은하루");
+       } else {
+        console.log("좋은밤");
+       }
+       let num = 2;
+       let result = num>4 ? "맞아요" : "틀렸어요" ; // 삼항연산자
+       console.log(result);
+       if(num>4) {
+        result = "맞아요";
+       } else {
+        result = "틀렸어요";
+       }
+
+       /*
+       prompt로 입력을 받아서 입력받은 값이 홀수면 경고창에 홀수, 짝수면 짝수를 출력
+       */
+    //    let num2 = prompt ("숫자를 입력하세요")
+    //     if(isNaN(Number(num2)) || !num2 ) {
+    //         alert("숫자를 입력하세요.")
+    //     } else if(num2%2==1){
+    //         alert("홀수 입니다.");
+    //     } else {
+    //         alert("짝수 입니다.");
+    //     }
+        /*
+        아이디를 입력받은 후
+        아이디 값이 admin이면 비밀번호를 입력받으세요
+        비밀번호가 1234면 환영합니다.
+        틀리면 인증에 실패했습니다.
+        */
+        let login = prompt ("아이디를 입력하세요 !")
+        if(isNaN(Number(login)) || !login ) {
+            prompt("비밀번호를 입력하세요 !");
+            if(1234) {
+                alert("환영합니다!");
+            }
+        } else {
+                alert("인증에 실패했습니다.");
+            }
+        
+        let result2 = a+b<4 ? "미만" : "이상";
+
+
+    </script>
+</body>
+</html>

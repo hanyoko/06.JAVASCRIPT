@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+		function alertDialogBox() {
+			alert("확인을 누를 때까지 다른 작업을 할 수 없어요!");
+		}
+        function confirmDialogBox() {
+			var str;
+
+			if (confirm("확인이나 취소를 눌러주세요!") == true) {
+				str = "당신은 확인을 눌렀습니다!";
+			} else {
+				str = "당신은 취소을 눌렀습니다!";
+			}
+			document.getElementById("text").innerHTML = str;
+		}	
+        function promptDialogBox() {
+			var inputStr = prompt("당신의 이름을 입력해 주세요 : ", "홍길동");
+
+			if (inputStr != null) {
+				document.getElementById("text").innerHTML = "당신의 이름은 " + inputStr + "입니다.";
+			}
+		}
+        var str = document.getElementById("text");
+		str.innerHTML = "이 문장으로 바뀌었습니다!";
+        function printDate() {
+			document.getElementById("date").innerHTML = Date();
+		}
+	</script>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Window 객체의 alert() 메소드</h1>
+	        <button onclick="alertDialogBox()">alert 대화 상자</button>
+        </div>
+        <div>
+            <h1>confirm() 메소드</h1>
+	        <button onclick="confirmDialogBox()">confirm 대화 상자</button>
+	        <p id="text"></p>
+        </div>
+        <div>
+            <h1>prompt() 메소드</h1>
+	        <button onclick="promptDialogBox()">prompt 대화 상자</button>
+	        <p id="text"></p>
+        </div>
+        <div>
+            <h1>HTML DOM 요소를 이용한 innerHTML 프로퍼티</h1>
+	        <p id="text">이 문장을 바꿀 것입니다!</p>
+        </div>
+        <div>
+            <h1>Document 객체의 write() 메소드</h1>
+        	<button onclick="document.write(4 * 5)">버튼을 눌러보세요!</button>
+        </div>
+        <div>
+            <h1>head 태그 내의 자바스크립트</h1>
+	        <p>자바스크립트를 이용하면 현재 날짜와 시간 정보에도 손쉽게 접근할 수 있어요!</p>
+	        <button onclick="printDate()">현재 날짜와 시간 표시하기!</button>
+	        <p id="date"></p>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>

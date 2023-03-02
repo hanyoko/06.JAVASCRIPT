@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #wrap {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1000px;
+            border: 1px solid purple;
+            margin-top: 300px;
+            height: 300px;
+        }
+        header {
+            height: 80px;
+            background-color: plum;
+            color: aliceblue;
+            border-bottom: 1px solid purple;
+        }
+        #main {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input{
+            padding: 40px 0;  
+        
+        }
+        #result {
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>기념일</h1>
+            <p>사귄 날짜를 입력하세요.</p>
+        </header>
+        <div id="main">
+            <div class="input">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+            <div class="button">
+                <button>50일은 ?</button>
+                <button>100일은 ?</button>
+                <button>오늘은 몇일째 ?</button>
+                <p id="result">우리가 만난지</p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

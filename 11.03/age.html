@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = prompt ("나이를 입력해주세요") // 나이
+        if(!age) {
+            alert("나이를 입력하지 않았습니다.");
+        } else if (age <= 7) {
+            alert("버스요금은 0원입니다.");
+        } else if (age >= 8 && age <= 13) {
+            alert("버스요금은 450원입니다.");
+        } else if (age >= 14 && age <= 19) {
+            alert("버스요금은 720원입니다.");
+        } else if (age >= 20 && age < 70) {
+            alert("버스요금은 1200원입니다.");
+        } else if (age >= 70) {
+            alert("버스요금은 0원입니다.");
+        }
+        // busFare = 0; // 버스 요금
+    </script>
+</body>
+</html>

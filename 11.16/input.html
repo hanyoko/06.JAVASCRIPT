@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="username">
+    <button onclick="inputPrint()">클릭</button>
+    <ul>
+        <li>list1<span>span</span></li>
+        <li>list2<span>span</span></li>
+        <li>list3<span>span</span></li>
+        <li>list4<span>span</span></li>
+    </ul>
+    <div id="box01"><h1>안녕하세요</h1></div>
+    <div id="box02"></div>
+    <script>
+        const input = document.querySelector("#username");
+        console.log(input);
+        function inputPrint(){
+            input.value = "";
+        }
+        //parentElement
+        const ul = document.querySelector("ul")
+        ul.addEventListener("click",function(e){
+            console.log(e);
+            let li = e.target;
+            console.log(li);
+        })
+        box01.innerHTML = "<h2>즐거운 수요일</h2>";     //innerHTML은 태그를 인식한다
+        box02.innerText = "<h2>즐거운 수요일</h2>";     //innerText는 태그를 인식하지 못하고 적힌 그대로 출력된다.
+        ul.prepend("곧 쉬는시간");
+        const li =document.createElement('li');
+        li.innerHTML = "새로운<span>li</span>입니다.";
+        ul.prepend(li);
+    </script>
+</body>
+</html>

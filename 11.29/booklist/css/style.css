@@ -1,0 +1,54 @@
+:root {
+     /* size */
+     --base-space : 8px;
+     --size-button : 200px;
+     --height-button: 40px;
+     --font-size : 14px;
+     --size-border: 4px;
+     --size-thumnail : 45px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+#wrap {
+    width: 900px;
+    max-width: 100%;
+    margin-top: 100px;
+}
+h1 {
+    text-align: end;
+    padding-right: 200px;
+    padding-bottom: 50px;
+}
+.buttonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+button {
+    width: var(--size-button);
+    height: var(--height-button);
+    background: black;
+    color: #fff;
+    border-radius: var(--base-space);
+    transition: var(--animation);
+}
+button:hover {
+    transform: scale(1.2);
+}
+table {
+    width: 100%;
+    text-align: center;
+}
+th {
+    border-top: 3px solid black;
+}
+tr, th, td {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}

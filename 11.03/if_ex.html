@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* userId가 admin이면
+        userPass를 사용자로부터 입력받고,
+        userPass는 1234면 환영합니다. 다르면 인증에 실패했습니다. */
+        let userId = prompt ('아이디를 입력하세요');
+        if(!userId) { //!는 부정의 의미 -> 아무것도 입력하지 않았을 때
+            userId = prompt('아이디를 입력하지 않았습니다 !');
+        } else if(userId === "admin"){
+            prompt("비밀번호를 입력하세요")
+            let userPass = prompt("비밀번호를 입력하세요");
+            if(userPass === "1234"){
+                alert("환영합니다 !");
+            } else {
+                alert("인증에 실패했습니다.");
+            }
+        } else {
+                alert("인증에 실패했습니다.");
+            }
+        const a = confirm ("확인하시겠습니까?")
+        const b = confirm ("저장하시겠습니까?")    
+    </script>
+</body>
+</html>

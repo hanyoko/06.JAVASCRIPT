@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+        }
+        #wrap {
+            background: yellow;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 50px;
+            margin-top: 200px;
+        }
+        #left {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        #right {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        #a {
+            background-color: lightblue;
+            width: 300px;
+            height: 200px;
+            border: 4px double black;
+            padding-top: 60px;
+        }
+        #b {
+            background-color: lightcoral;
+            width: 300px;
+            height: 200px;
+            border: 4px double black;
+            padding-top: 60px;
+        }
+        #c {
+            background-color: lightgoldenrodyellow;
+            width: 300px;
+            height: 200px;
+            border: 4px double black;
+            padding-top: 60px;
+        }
+        #d {
+            background-color: lightgreen;
+            width: 300px;
+            height: 200px;
+            border: 4px double black;
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="left">
+            <div id="a">나이</div>
+            <div id="b">버스요금</div>
+        </div>
+        <div id="right">
+            <div id="c"></div>
+            <div id="d"></div>
+        </div>
+    </div>
+    <script>
+        let age = prompt ("나이를 입력해주세요 !") // 나이
+        let busFare = 0;
+        
+        if (age <= 7) {
+            busFare = 0;
+            document.getElementById(c)("0");
+        } else if (age >= 8 && age <= 13) {
+            busFare = 450;
+            document.write("450");
+        } else if (age >= 14&& age <= 19) {
+            busFare = 720;
+            document.write("720");
+        } else if (age >= 20 && age < 70) {
+            busfare = 1200;
+            document.write("1200");
+        } else if (age >= 70) {
+            busFare = 0;
+            document.write("0");
+        }
+        
+        
+    </script>
+</body>
+</html>

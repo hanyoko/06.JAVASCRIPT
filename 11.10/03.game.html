@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //컴퓨터의 랜덤 숫자를 지정
+        //숫자를 랜덤으로 리턴
+        let userNum = Math.ceil(Math.random()*6);
+        function dice(){
+            console.log(`당신의 주사위는 ${userNum}입니다.`);
+        }
+        dice();
+        let comNum = Math.ceil(Math.random()*6);
+        function com_dice(){
+           console.log(`컴퓨터의 주사위는 ${comNum}입니다.`);
+        }
+        com_dice();
+        //게임시작 함수
+        if(userNum == comNum){
+            console.log("비겼습니다.");
+        } else if(userNum > comNum){
+            console.log("이겼습니다");
+        } else{
+            console.log("졌습니다.");
+        }
+
+    </script>
+</body>
+</html>

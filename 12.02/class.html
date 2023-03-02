@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체리터럴
+        let 강아지 = {
+            name: "구름",
+            age: 3,
+            color: "흰색",
+            sound(){
+                console.log("멍멍");
+            }
+        }
+        // let name = 강아지.name;
+        // let sound = 강아지.sound;
+        // sound();
+        // 강아지.sound();
+        let { name, sound } = 강아지;   //여러 개로 적을 것을 이렇게 한줄로 나타낼 수 있는 것이 구조 분해 할당 !
+    </script>
+</body>
+</html>

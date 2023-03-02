@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        div {
+            width: 1000px;
+            height: 500px;
+            border: 1px solid black;
+            margin-top: 100px;
+            margin-bottom: 30px;
+
+        }
+        button {
+            margin: 0 50px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button onclick="pink()">pink 색상</button>
+    <button onclick="red()">red 색상</button>
+    <button onclick="blue()">blue 색상</button>
+    <button onclick="green()">green 색상</button>
+    <script>
+        function pink() {
+            document.querySelector("div")
+            .style.backgroundColor = "pink";
+        }
+        function red() {
+            document.querySelector("div")
+            .style.backgroundColor = "red";
+        }
+        function blue() {
+            document.querySelector("div")
+            .style.backgroundColor = "blue";
+        }
+        function green() {
+            document.querySelector("div")
+            .style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>

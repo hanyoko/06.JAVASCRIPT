@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+    <button onclick="removeDiv()">클릭하세요</button>
+    <script>
+        let box2 = document.querySelector("#box2");
+        let ul = document.querySelector("ul");
+        let li = document.querySelector("li:nth-child(3)");
+        function removeDiv(){
+            box2.remove();
+        }
+        ul.removeChild(li); //자식을 지울 때
+    </script>
+</body>
+</html>

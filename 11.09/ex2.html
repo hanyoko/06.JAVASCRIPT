@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        li {
+            list-style: none;
+        }
+        #wrap {
+            position: relative;
+        }
+        #bg.bg {
+            background-color: black;
+            opacity: 0.5;
+            display: block;
+        }
+        #bg {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        #menu_list2 ul{
+            display: none;
+        } 
+        #menu_list2 .menu_list2 {
+            display: block;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: pink;
+            color: #fff;
+            height: 60px;
+        }
+        #bar p {
+            display: block;
+            width: 40px;
+            height: 5px;
+            margin: 5px 3px;
+            background-color: #fff;
+        }
+        .hide {
+            background-color: lightyellow;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: -300px;
+            transition: 0.5s;
+            z-index: 1;
+        }
+        .hide_out {
+            left: 0;
+        }
+        .hide div {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            height: 60px;
+        }
+        .menu_close {
+            height: 50px;
+            border-bottom: 1px solid #333;
+        }
+        .menu_close div {
+            padding: 0 10px;
+            height: 100%;
+            background-color: red;
+        }
+        .menu_list li {
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="bar">
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <h1>Logo</h1>
+            <div></div>
+        </header>
+        <div class="hide">
+            <div class="menu_close">
+                <div id="close">메뉴닫기</div>
+            </div>
+            <ul class="menu_list">
+                <li id="menu_list2">회사소개
+                    <ul>
+                        <li>small menu1</li>
+                        <li>small menu2</li>
+                        <li>small menu3</li>
+                        <li>small menu4</li>
+                    </ul>
+                </li>
+                <li>투자정보</li>
+                <li>홍보센터</li>
+                <li>인재채용</li>
+                <li>교육신청</li>
+            </ul>
+        </div>
+        <div id="bg"></div>
+    </div> 
+    <script>
+        let bar = document.querySelector("#bar");
+        let close = document.querySelector("#close");
+        let menu2 = document.querySelector("#menu_list2");
+
+        bar.addEventListener("click",function(){
+            document.querySelector(".hide").classList.add("hide_out"); 
+            document.querySelector("#bg").classList.add("bg");
+        })
+        menu2.addEventListener("click",function(){
+            document.querySelector("#menu_list2 ul").classList.toggle("menu_list2");
+        })
+
+        close.addEventListener("click",function(){
+            document.querySelector(".hide").classList.remove("hide_out");
+            document.querySelector("#bg").classList.remove("bg"); 
+        })
+
+
+    </script>
+</body>
+</html>

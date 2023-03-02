@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수 선언문 방식
+        //function 함수명(매개변수1) {
+            //return 반환값;
+        //}
+        //함수 선언문은 호이스팅된다 !!!!! 중요 !!!!!
+        //함수 정의하기 전에 호출이 가능하다 !!!!!!
+        let result = add(2,5);
+        console.log(result);
+        function add(a,b){
+            return a + b;
+        }
+        function printText(text){
+            return 0;   //return을 넣어주면 끝이다. return 뒤에 입력된 값은 실행되지 않는다 !
+            console.log(text);
+        }
+        let result2 = printText("월요일 싫어요!")
+        console.log(result2);
+        // add2(5,10);  -> 함수선언문만 호이스팅 되기 때문에 선언되지 않은 값을 미리 부를 수 없다.
+        let add2 = function(a,b){
+            return a+b;
+        }
+        console.log(add2(5,10));
+        // 매개변수 기본값 설정
+        // 전달하지 않은 매개변수의 디폴트 값을 설정할 수 있다.
+        function showMessage(message, from = "그린"){ //from = "그린" 의 의미는 default 값이 그린이라는 뜻이다.
+            console.log(`메시지는 ${message} 이고, 보낸사람은 ${from}이다.`);
+        }
+        showMessage("야호","영희");
+        showMessage("자바스크립트","철수");
+        showMessage("하하하", "병준");
+        showMessage("몽충아")   // 값을 입력하지 않으면 default 값이 들어가게된다.
+
+        // 나머지 매개변수 (es6 때 추가되었다.)
+        // 배열 형태로 전달할 수 있다 ! ! ! ! ! ! !
+        function printAll(...arr){
+            for(let i=0; i<arr.length; i++){
+                console.log(arr[i]);
+            }
+            arr.forEach(i=>{    //i=>는 function(i)와 같다.
+                console.log(i)
+            })
+        }
+        printAll('원빈','김희선','송중기');
+        printAll('강하늘','김희선');
+
+        // 화살표 함수 -> 무기명 함수를 간략하게 작성
+        let add3 = function(a,b){
+            return a+b;
+        }
+        let add4 = (a,b) => a+b;
+        console.log(add4(2,3));
+
+        // 즉시실행함수
+        (function hello(){
+            console.log('실행됨');
+        })();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body {
+                background-color: seagreen;
+            }
+            #wrap {
+                width: 100%;
+                max-width: 2000px;
+                margin: 0 auto;
+                margin-top: 200px;
+            }
+            h1 {
+                text-align: center;
+                font-size: 50px;
+                color: #fff;
+            }
+            #number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 80px;
+                color: black;
+            }
+            #number p {
+                width: 150px;
+                height: 150px;
+                margin: 0 20px;
+                padding-top: 50px;
+                background-color: lightgrey;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 30px;
+            }
+            button {
+                width: 200px;
+                height: 50px;
+                display: block;
+                color: black;
+                font-size: 16px;
+                background-color: black;  
+                color: #fff;
+            }
+            #btn {
+                margin-left: 1200px;
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div>
+                <h1>로또 번호 출력하기</h1>
+            </div>
+            <div id="number">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p> +
+                <p></p>
+            </div>
+            <div>
+                <button id="btn" onclick="blackButton()">로또 추첨기</button>
+            </div>
+        </div>
+        <script>
+            //1~45번까지 가지고 있는 배열만들기
+        
+        
+        function blackButton(){
+            let lotto = [];
+            for(let i=1; i<=45; i++){
+            lotto.push(i);  // 1~45까지 lotto값이 추가됨
+            }
+            console.log(lotto);
+            for(let i=1; i<8; i++){
+            //0~lotto 배열의 마지막 인덱스 번호중 랜덤한 숫자 하나를 생성
+            let ranNum = Math.floor(Math.random()*lotto.length);
+            document.querySelector(`p:nth-child(${i})`).innerHTML = lotto[ranNum];
+            //만약 i=0으로 시작하면 ${i+1}
+            //배열에서 선택된 순번의 값을 제거
+            lotto.splice(ranNum,1);
+            }
+        }
+        
+        
+        
+        
+        </script>
+    </body>
+    </html>
+</body>
+</html>

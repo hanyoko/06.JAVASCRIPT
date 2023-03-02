@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Accumulator(startNum){
+            this.startNum = startNum;
+            this.read = function(){
+                this.startNum = this.startNum + Number(prompt("숫자를 입력하세요"));
+                return this.startNum;
+            }
+        }
+        let acc = new Accumulator(10);
+        console.log(acc.startNum);
+        console.log(acc.read());
+
+        function Student(name, age, score1, score2){
+            this.name = name;
+            this.age = age;
+            this.score1 = score1;
+            this.score2 = score2;
+            this.total = function(){
+                return this.score1 + this.score2;
+            }
+        }
+        let student1 = new Student("green",22,85,75);
+        let student2 = new Student("blue",25,80,60);
+        let result3 = student1.total();
+        let result4 = student2.total();
+        console.log(`student의 점수합계는 ${result3}이고 student2의 점수 합계는 ${result4} 이다.`);
+    </script>
+</body>
+</html>

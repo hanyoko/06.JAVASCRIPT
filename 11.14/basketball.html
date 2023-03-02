@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;}
+        #wrap {
+            width: 100%;
+            max-width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            text-align: center;
+            border: 5px double black;
+            margin-top: 50px;
+            color: #fff;
+            font-size: 20px;
+        }
+        #top {
+            background-color: orange;
+            height: 60%;
+        }
+        .count {
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .count p {
+            background-color: black;
+            width: 80px;
+            height: 60px;
+            margin-left: 30px;
+            padding-top: 15px;
+        }
+        .screen {
+            height: 60%;
+            display: flex;
+            justify-content: center;
+        }
+        .screen div {
+            border: 1px solid #fff;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 35%;
+            
+        }
+        .screen .com {
+            margin-right: 50px;
+        }
+        .screen .com div {
+            border: 0;
+            margin-bottom: 20px;
+        }
+        .screen .person div {
+            border: 0;
+            margin-bottom: 20px;
+        }
+        .screen p {
+            width: 100px;
+            height: 80px;
+            background-color: black;
+            padding-top: 25px;
+        }
+        .alert {
+            height: 20%;
+            padding-top: 35px;
+        }
+        #under {
+            background-color: lightcoral;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+        }
+        #shoot_com {
+            margin-right: 300px;
+            margin-top: 60px;
+        }
+        #shoot_per {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            width: 100px;
+            height: 60px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div class="count">
+                <div>남은 슛 횟수</div>
+                <p>00</p>
+            </div>
+            <div class="screen">
+                <div class="com">
+                    <div>컴퓨터</div>
+                    <p>00</p>
+                </div>
+                <div class="person">
+                    <div>사람</div>
+                    <p>00</p>
+                </div>
+            </div>
+            <div class="alert">컴퓨터가 3점슛을 실패했습니다.</div>
+        </div>
+        <div id="under">
+            <div id="shoot_com">
+                <div>컴퓨터</div>
+                <button onclick="shoot">슛하기</button>
+            </div>
+            <div id="shoot_per">
+                <div>사용자</div>
+                <button onclick="two">2점슛</button>
+                <button onclick="three">3점슛</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let point20 = Math.floor(Math.random() * 2);
+            let point30 = Math.floor(Math.random() * 3);
+        
+        function shoot(){
+            
+        let pointran = Math.floor(Math.random() * 2);
+            
+        }
+    </script>
+</body>
+</html>

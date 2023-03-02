@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1 = [1,2,3];
+        let arr2 = [7,8,9];
+        let arr3 = [...arr1,4,5,6,...arr2];
+        //...arr1을 사용해 arr1 값을 넣어줄 수 있다.
+        console.log(arr3);
+        console.log(Math.max(...arr1)); //1,2,3이 들어있는 것과 같다.
+    </script>
+</body>
+</html>

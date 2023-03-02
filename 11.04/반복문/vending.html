@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: black;
+        }
+        #wrap {
+            text-align: center;
+            margin-top: 300px;
+            font-size: 30px;
+            border: 4px double red;
+            color: #fff;
+        }
+        #wrap div {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        #wrap div > div:nth-child(1) {
+            border: 1px solid black;
+        }
+        #wrap div > div:nth-child(2) {
+            border: 1px solid black;
+        }
+        #wrap div > div:nth-child(3) {
+            border: 1px solid black;
+        }
+        button {
+            width: 100px;
+            height: 50px;
+            margin: 30px 50px;
+            font-size: 30px;
+            color: green;
+        }
+        p {
+            margin: 20px 0;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div>
+            <div>A 음료수 : 500원</div>
+            <div>B 음료수 : 700원</div>
+            <div>C 음료수 : 1000원</div>
+        </div>
+        <button onclick="inputMoney(100)">100</button>
+        <button onclick="inputMoney(500)">500</button>
+        <button onclick="inputMoney(1000)">1000</button>
+        <p id="money"></p>
+        <p id="select"></p>
+    </div>
+    <script>
+        //버튼 클릭하면 money 해당 버튼의 금액을 더해줌
+        //금액은 id="money"인 p요소 출력
+        //금액에 따라 살 수 있는 음료수 종류는 id="select"인 p요소 출력
+        //*A음료수, B음료수*
+        let money = 0;
+        // let p = document.querySelector("#money");
+        function inputMoney(inputM){
+            console.log(`${inputM}을 클릭했습니다.`);
+            money = money + inputM;
+            // document.querySelector("#money").innetHTML = money;
+            document.querySelector("#money").innerHTML = money;
+            selectCh();
+        }
+        // function input100(){
+        //     money = money+100;
+        //     p.innerHTML = money;
+        //     //money가 500이상일 때 A 음료수
+        //     //money가 700이상일 때 A 음료수, B 음료수
+        //     //money가 1000이상일 때 A음료수, B음료수, C음료수
+        //     selectCh();
+        // }
+        // function input500(){
+        //     money = money+500;
+        //     p.innerHTML = money;
+        //     selectCh();
+        // }
+        // function input1000(){
+        //     money = money+1000;
+        //     p.innerHTML = money;
+        //     selectCh();
+        // }
+        function selectCh(){
+            let selectMenu = "";
+            if(money >= 1000){
+                selectMenu= "A음료수, B음료수, C음료수";
+            }else if(money >= 700) {
+                selectMenu = "A음료수, B음료수";
+            }else if(money >= 500) {
+                selectMenu = "A음료수";
+            }else {
+                selectMenu = "못 사요"
+            }
+            document.querySelector("#select").innerHTML = selectMenu;
+        }
+       
+    </script>
+</body>
+</html>

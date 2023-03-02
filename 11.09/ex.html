@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            display: flex;
+        }
+        li {
+            padding-right: 50px;
+        }
+        .boxA {
+            background: red;
+            height: 800px;
+        }
+        .boxB {
+            background: blue;
+            height: 800px;
+        }
+        .boxC {
+            background: green;
+            height: 800px;
+        }
+        .boxD {
+            background: yellow;
+            height: 800px;
+        }
+        div {
+            transition: 0.5s;
+            width: 100%;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="a">menu1</li>
+        <li id="b">menu2</li>
+        <li id="c">menu3</li>
+        <li id="d">menu4</li>
+    </ul>
+    <div>
+    </div>
+    <script>
+        let a = document.querySelector("#a");
+        let b = document.querySelector("#b");
+        let c = document.querySelector("#c");
+        let d = document.querySelector("#d");
+
+        a.addEventListener("mouseenter",function(){
+            document.querySelector("div").classList.add("boxA");
+        })
+        a.addEventListener("mouseleave",function(){
+            document.querySelector("div").classList.remove("boxA");
+        })
+
+        b.addEventListener("mouseenter",function(){
+            document.querySelector("div").classList.add("boxB");
+        })
+        b.addEventListener("mouseleave",function(){
+            document.querySelector("div").classList.remove("boxB");
+        })
+
+        c.addEventListener("mouseenter",function(){
+            document.querySelector("div").classList.add("boxC");
+        })
+        c.addEventListener("mouseleave",function(){
+            document.querySelector("div").classList.remove("boxC");
+        })
+
+        d.addEventListener("mouseenter",function(){
+            document.querySelector("div").classList.add("boxD");
+        })
+        d.addEventListener("mouseleave",function(){
+            document.querySelector("div").classList.remove("boxD");
+        })
+        </script>
+</body>
+</html>

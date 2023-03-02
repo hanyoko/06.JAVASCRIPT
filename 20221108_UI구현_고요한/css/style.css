@@ -1,0 +1,180 @@
+body {
+    background-color: lightgray;
+    font-family: "나눔 고딕", "맑은 고딕", sans-serif;
+    line-height: 1.6;
+    background: url(../images/bamboo-g4ea8f2d41_1920.jpg) center center no-repeat;
+}
+
+#wrap {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 60px;
+    background: #fff;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div {
+    padding-top: 3px;
+    padding-bottom: 8px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    height: 50px;
+    background: url(../images/top_logo.png) center center no-repeat;
+}
+
+.email input {
+    width: 100%;
+}
+
+.name input {
+    width: 100%;
+}
+
+.password input {
+    width: 100%;
+}
+
+.passwordCheck input {
+    width: 100%;
+}
+
+.date {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#year {
+    width: 20%;
+    text-align: end;
+}
+
+#month {
+    width: 10%;
+    text-align: end;
+}
+
+#day {
+    width: 10%;
+    text-align: end;
+}
+
+.date_text {
+    border: 0;
+    font-size: 13px;
+    color: gray;
+}
+
+.phoneCheck{
+    display: flex;
+}
+
+.phoneCheck div{
+    padding: 0 10px;
+}
+
+.phone {
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+}
+
+#phone1 {
+    width: 18%;
+}
+
+#phone2 {
+    width: 30%;
+}
+
+#phone3 {
+    width: 30%;
+}
+
+.auth {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth div {
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.auth button {
+    width: 70%;
+}
+
+.timer div {
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.timer button {
+    width: 70%;
+}
+
+.area select {
+    width: 100%;
+    height: 40px;
+    margin-top: 25px;
+}
+
+.gender {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gender_check {
+    margin: 0 30px;
+}
+
+button{
+    cursor: pointer;
+    height: 40px;
+    color: #fff;
+}
+
+.signUp button {
+    width: 100%;
+    cursor: pointer;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.error{
+    font-size: 12px;
+    height: 20px;
+    color:red;
+    font-weight: 700;
+}

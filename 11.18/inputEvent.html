@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        #wrap {
+            margin: 0 auto;
+            text-align: center;
+        }
+        header {
+            line-height: 80px;
+            background: pink;
+            color: #fff;
+        }
+        #main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .random {
+            height: 100px;
+            margin-top: 50px;
+            font-size: 40px;
+        }
+        input,button {
+            height: 50px;
+            width: 180px;
+            text-align: center;
+        }
+        input {
+            padding: 20px;
+            font-size: 25px;
+        }
+        .timer_score {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>타자게임</h1>
+        </header>
+        <div id="main">
+            <p class="random">color</p>
+            <input type="text" id="myInput" />
+            <p class="timer_score">남은시간 : 0초 점수 : 0점</p>
+            <button>게임종료</button>
+        </div>
+    </div>
+    
+    <script>
+        const input = document.querySelector("#myInput");
+        input.addEventListener("input",function(){
+            console.log(input.value);
+        })
+
+        const data = ['월요일','화요일','수요일','목요일','금요일','토요일','일요일','컴퓨터','키보드','마우스','프로그램','휴대폰','에어팟','자바스크립트','에어팟','볼펜']
+    </script>
+
+</body>
+</html>
