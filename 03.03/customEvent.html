@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="divElem">커스텀 이벤트 객체에 대해 배워봅시다.</div>
+    <script>
+        //커스텀 이벤트 생성
+        const a = new CustomEvent("nameEvent", {
+            detail: {name: "그린"}
+        })
+        window.addEventListener("nameEvent",(event) => {
+            console.log(event.detail.name)
+        })
+        setTimeout(()=>{
+            window.dispatchEvent(a)
+        }, 1000)
+        window.dispatchEvent(new CustomEvent("nameEvent", {
+            detail: {name: "오렌지"}
+        }))
+        window.dispatchEvent(new CustomEvent("nameEvent", {
+            detail: {name: "블루"}
+        }))
+    </script>
+</body>
+</html>

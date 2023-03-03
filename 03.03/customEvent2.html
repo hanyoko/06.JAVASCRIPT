@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">클릭1</button>
+    <button id="btn2">클릭2</button>
+    <script>
+        const customSample1 = new CustomEvent("consoleEvent", {
+            detail: {
+                message: "하하하하"
+            }
+        })
+        const customSample2 = new CustomEvent("consoleEvent", {
+            detail: {
+                message: "호호호호"
+            }
+        })
+        window.addEventListener("consoleEvent", (e) => {
+            console.log(e.detail.message)
+        })
+        document.querySelector("#btn1").addEventListener("click", ()=>{
+            dispatchEvent(customSample1)
+        })
+        document.querySelector("#btn2").addEventListener("click", ()=>{
+            dispatchEvent(customSample2)
+        })
+    </script>
+</body>
+</html>
